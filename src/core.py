@@ -397,9 +397,9 @@ def main():
         # Validate
         is_valid, message = generator.validate_rule(rule)
         if is_valid:
-            print(f"{Colors.GREEN}✓ Rule validation: {message}{Colors.RESET}\n")
+            print(f"{Colors.GREEN}[OK] Rule validation: {message}{Colors.RESET}\n")
         else:
-            print(f"{Colors.YELLOW}⚠ Rule validation: {message}{Colors.RESET}\n")
+            print(f"{Colors.YELLOW}[!] Rule validation: {message}{Colors.RESET}\n")
         
         print(f"{Colors.CYAN}Generated Rule:{Colors.RESET}")
         print(rule)
@@ -407,7 +407,7 @@ def main():
         if args.output:
             with open(args.output, 'w') as f:
                 f.write(rule)
-            print(f"\n{Colors.GREEN}✓ Saved to: {args.output}{Colors.RESET}")
+            print(f"\n{Colors.GREEN}[OK] Saved to: {args.output}{Colors.RESET}")
             
     except Exception as e:
         print(f"{Colors.RED}Error: {e}{Colors.RESET}")
